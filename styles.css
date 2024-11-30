@@ -1,61 +1,87 @@
+/* Estilos globais */
 body {
-    color: white;
-    background: black;
-    margin: 0px;
-    font-family: "Chakra Petch", sans-serif;
-    margin-bottom: 100px;
+    font-family: 'Arial', sans-serif;
+    background-color: #d0ebff; /* Tom de azul claro */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
+/* Estilo do cabeçalho */
 header {
-    border-bottom: solid 2px rgb(42, 122, 228);
-    padding: 20px;
-    font-size: 32px;
-    color: rgb(42, 122, 228);
+    background: linear-gradient(90deg, #005c99, #0077cc); /* Degradê azul */
+    color: white;
+    padding: 40px 20px;
     text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.chamada {
-    background: rgb(184, 156, 213);
-    padding-bottom: 80px;
-    padding-top: 80px;
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+header h2 {
+    margin: 10px 0 0;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+/* Estilo da seção principal */
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.chamada-texto {
-    margin-right: 5%;
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
 }
 
-h1 {
-    font-size: 40px;
+.video {
+    position: relative;
+    cursor: pointer;
 }
 
-p {
-    font-size: 20px;
+.video img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
+.video img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
+/* Estilo do rodapé */
+footer {
+    margin-top: auto;
+    background-color: #0077cc;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
 }
 
-.categoria-videos img {
-    opacity: 0.5;
-    height: 200px;
-}
-
-.categoria-videos img:hover {
-    opacity: 1.0;
-    border: 3px solid green;
-}
-
-.categoria h2 {
-    color: rgb(42, 122, 228);
+footer p {
+    margin: 0;
+    font-size: 0.9em;
 }
